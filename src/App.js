@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './css/estilos.css'
 import Home from './components/pages/Home'
+import {createStore} from 'redux';
 import Items from './components/pages/Items'
 import Cabecera from './components/Cabecera'
 import {
@@ -8,7 +9,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
-
+const store =createStore(()=>{});
 class App extends Component {
   render() {
     return (
@@ -20,7 +21,6 @@ class App extends Component {
               <Route path="/" exact component={Home}/>
               <Route path="/productos" component={Items}/>
             </Switch>
-          
         </div>
       </Router>
     );

@@ -4,16 +4,41 @@ import {
 } from 'react-router-dom'
 
 class Nav extends Component{
+    constructor(){
+        super();
+        this.state = {
+            categorias: []
+        }
+        this.getCategorias();
+    }
+    
+    getCategorias(){ 
+        fetch(`http://localhost/alain/cotizador/public/api/controller/getCategorias.php`, {
+            method: 'POST'
+        })
+        .then(res=> res.json())
+        .then(categorias =>{
+            this.setState({
+                categorias:categorias
+            })
+        })
+        .catch(function() {
+            alert("no se puede conectar");
+        });
+       
+    }
+       
+    
     render(){
+        
         return(
                 <div>
                     <ul>
+                    {this.state.categorias.map(categoria=>(
                         <li>
-                            <Link to="/">Home</Link>
+                            <Link to="/">{categoria.nombre}</Link>
                         </li>
-                        <li>
-                            <Link to="/productos">productos</Link>
-                        </li>
+                    ))}
                     </ul>
                 </div>
         );

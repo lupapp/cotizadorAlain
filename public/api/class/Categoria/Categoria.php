@@ -138,7 +138,7 @@ class Categoria extends Mysqli
         while($row=$query->fetch_object()){
             $resultset[]=$row;
         }
-        return $resultset;
+        echo json_encode($resultset);
     }
     public function getIdByTag($tag){
         $id='';

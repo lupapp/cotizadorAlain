@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Categorias from '../Categorias';
 
-class Home extends Component{
+
+function Home (){
    
-    render(){
-        return(
-            
-            <h1>Inicio</h1>
-        );
-    }
+    return(
+            <div className="sliderHome">
+            <Categorias></Categorias>
+
+            </div>
+    );
 }
 export default Home;

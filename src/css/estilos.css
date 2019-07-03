@@ -23,7 +23,9 @@
 .App-link {
   color: #61dafb;
 }
-
+.header-top{
+  border-bottom:1px #ccc solid;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -32,5 +34,73 @@
     transform: rotate(360deg);
   }
 }
+.b-slider-range {
+  background-color: #dadada;
+  height: 4px;
+  border-radius: 3px;
+  margin-top: 57px;
+  margin-bottom: 25px;
+  box-shadow: 0 -2px 0 #b3b3b3 inset; }
+  .b-slider-range:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -10px; }
+  .b-slider-range .ui-slider-handle {
+    background-color: #dfdfdf;
+    border-radius: 10px;
+    outline: 0 none;
+    width: 9px;
+    height: 9px;
+    top: -2px;
+    cursor: pointer;
+    box-shadow: 0 0 1px #b3b3b3; }
+    .b-slider-range .ui-slider-handle:before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background-color: #E1127E;
+      float: left;
+      border-radius: 10px;
+      margin: 2px;
+      box-shadow: 0 -1px 1px #a734ff inset; }
+    .b-slider-range .ui-slider-handle span {
+      color: white;
+      background-color: #E1127E;
+      padding: 4px 7px 3px;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 100%;
+      margin-bottom: 7px;
+      left: -18px;
+      min-width: 42px;
+      text-align: center; }
+      .b-slider-range .ui-slider-handle span:before {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 4px;
+        border-color: #E1127E transparent transparent transparent;
+        left: 50%;
+        top: 100%;
+        margin-left: -4px; }
+  .b-slider-range .ui-slider-range {
+    background-color: #E1127E;
+    box-shadow: 0 -2px 0 #a734ff inset; }
 
+.b-slider-range_min,
+.b-slider-range_max {
+  position: absolute;
+  top: -24px; }
+
+.b-slider-range_min {
+  left: 0; }
+
+.b-slider-range_max {
+  right: 0; }
+
+.f-slider-range {
+  color: #717171;
+  font-size: 0.84615em;
+  line-height: 1.2; }
 /*# sourceMappingURL=estilos.css.map */

@@ -7,37 +7,26 @@ const city='cali,col';
 const urlapi =`${url}?q=${city}&appid=${api}`;*/
 export default class Items extends Component{
     state = {
-        name: '',
+        categorias: []
       }
+     
+      componentWillMount() {
     
-      handleChange = event => {
-        this.setState({ name: event.target.value });
-      }
-    
-      handleSubmit = event => {
-        event.preventDefault();
-    
-        const user = {
-          name: this.state.id
-        };
-    
-        axios.post(`https://www.lupaweb.com/alain/shop/Administer/controller/buscarterminos.php`, { user })
-          .then(res => {
-            console.log(res);
-            console.log(res.data);
-          })
+        axios.get(`https://localhost/alain/cotizador/api/controller/getCategorias.php`, 15)
+          .then((response) => {
+            this.setState({
+              categorias:response.data
+            })
+          });
       }
     
       render() {
         return (
           <div>
-            <form onSubmit={this.handleSubmit}>
-              <label>
-                Person Name:
-                <input type="text" name="id" onChange={this.handleChange} />
-              </label>
-              <button type="submit">Add</button>
-            </form>
+              <h1>producto</h1>
+            <ul>
+                { this.state.persons.map(person => <li>{person.name}</li>)}
+            </ul>
           </div>
         )
       }

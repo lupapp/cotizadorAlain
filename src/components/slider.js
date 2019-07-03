@@ -1,6 +1,5 @@
-import React, {Components} from 'react';
-
-class Slider extends Components{
+import React, {Component} from 'react';
+class Slider extends Component{
     render(){
         return(
             <div className="b-slidercontainer">
@@ -8,8 +7,7 @@ class Slider extends Components{
                     <ul>
                         <li data-transition="" data-slotamount="7">
                             <div className="tp-bannertimer"></div>
-                            <img data-retina src="">
-                           
+                            <img  src="./img/jmg.jpg" alt="imagen"></img>
                             <div className="caption lf<?php echo $d['captionEfecto']?>"  data-x="<?php echo $d['captionDataX'] ?>"  data-y="<?php echo $d['captionDataY'] ?>" data-speed="<?php echo $d['captionDataSpeed'] ?>" data-start="<?php echo $d['captionDataStart'] ?>">
                                 <div className="b-header-group f-header-group f-header-group--light">
                                 </div>
@@ -24,6 +22,7 @@ class Slider extends Components{
                     </ul>
                 </div>
             </div>
+            
         );
     }
 }
